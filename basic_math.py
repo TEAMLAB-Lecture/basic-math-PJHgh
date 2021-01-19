@@ -67,8 +67,9 @@ def get_mean(number_list):
             47
     """
     mean = sum(number_list)/len(number_list)
+    if mean % 1 == 0: mean = int(mean)
     return mean
-
+    
 
 def get_median(number_list):
     """
@@ -94,4 +95,5 @@ def get_median(number_list):
     n = len(number_list)
     if n % 2 == 0: median = (number_list[n//2]+number_list[n//2-1])/2
     else: median = number_list[n//2]
+    if median % 1 == 0: median = int(median)
     return median
